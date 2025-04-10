@@ -17,7 +17,7 @@ gem 'sassc-rails' # For SCSS support
 gem 'bootstrap-icons'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-#gem 'ffi', '~> 1.15'
+gem 'ffi', '~> 1.16.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -42,6 +42,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'rails-controller-testing'
 end
 
 group :development do
