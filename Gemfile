@@ -17,7 +17,7 @@ gem 'sassc-rails' # For SCSS support
 gem 'bootstrap-icons'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-gem 'ffi', '~> 1.15'
+#gem 'ffi', '~> 1.15'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
