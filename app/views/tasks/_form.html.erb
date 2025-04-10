@@ -1,5 +1,5 @@
 <% view_variables = task.persisted? ? { path: task_path(task), method: :patch, modal_title: 'Update Task' } : { path: tasks_path, method: :post, modal_title: 'Create Task' } %>
-<%= form_with(model: task, url: view_variables[:url], method: view_variables[:method], local: true) do |form| %>
+<%= form_with(model: task, url: view_variables[:url], method: view_variables[:method], remote: true) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -23,7 +23,6 @@
       <%= form.label :description, class: "form-label" %>
       <%= form.text_area :description, class: "form-control" %>
     </div>
-    <%# Default status is handled in the model or controller if not explicitly set here %>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
